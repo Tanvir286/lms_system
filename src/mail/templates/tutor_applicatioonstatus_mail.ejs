@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application status mail</title>
+  </head>
+  <body>
+
+    <p>Dear <%= name %>,</p>
+
+    <p>
+      We hope this message finds you well. We wanted to inform you about the
+      status of your tutor application with
+      <strong><%= process.env.APP_NAME %></strong>.
+    </p>
+
+    <% if (status === 'accepted') { %>
+    <p>
+      Congratulations! We are pleased to inform you that your application has
+      been approved. We were impressed with your qualifications and believe you
+      will be a valuable addition to our team of tutors.
+    </p>
+    <p>
+      Next Steps: Please log in to your account on our platform to complete any
+      remaining setup steps and start connecting with students.
+    </p>
+    <% } else if (status === 'rejected') { %>
+    <p>
+      We regret to inform you that after careful consideration, we have decided
+      not to move forward with your application at this time. This decision was
+      not easy, as we received many strong applications.
+    </p>
+    <p>
+      Feedback: If you would like feedback on your application or suggestions
+      for future applications, please feel free to reach out to us.
+    </p>
+    <% } %>
+
+    <p>
+      We appreciate the time and effort you invested in your application and
+      encourage you to apply again in the future.
+    </p>
+
+    <p>Best regards,</p>
+    <p><strong>The <%= process.env.APP_NAME %> Team</strong></p>
+
+  </body>
+</html>
