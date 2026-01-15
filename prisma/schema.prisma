@@ -676,3 +676,12 @@ model TeamMember {
 
   @@map("team_members")
 }
+
+model CashOn{
+  id         String    @id @default(cuid())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @default(now())
+  deleted_at DateTime?
+
+  name     String?
+}
