@@ -684,4 +684,5 @@ model CashOn{
   deleted_at DateTime?
 
   name     String?
+  image    String?
 }
