@@ -686,4 +686,5 @@ model CashOn{
   name     String?
   image    String?
   description String? @db.Text 
+  location String?
 }
